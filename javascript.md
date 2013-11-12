@@ -352,7 +352,7 @@ Instead, do:
 
 ```js
 function* () {
-  var a = b
+  var a = yield 'b'
   var obj = {
     a: b
   }
