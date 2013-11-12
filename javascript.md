@@ -335,3 +335,26 @@ function *generator() {}
 
 Never `yield generator` or `yield generatorfunction`.
 Always do `yield* generator` or `yield* generatorfunction()`.
+
+### Put each `yield` in its own separate line
+
+Don't do anything like:
+
+```js
+function* () {
+  var obj = {
+    a: yield 'b'
+  }
+}
+```
+
+Instead, do:
+
+```js
+function* () {
+  var a = b
+  var obj = {
+    a: b
+  }
+}
+```
