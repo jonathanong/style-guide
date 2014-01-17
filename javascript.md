@@ -9,23 +9,20 @@ Generally, you should follow their styles unless overridden by these.
 
 * Prefer the latest ECMAScript syntax available on the target platform(s)
 * Prefer JSON styling when defining objects
-* Minimize nesting
-* Separate code into files
 * Filenames should mimic code structure
-* Code should be sorted from high-level to low-level
 * Try to keep lines less than 60 characters wide
 * Try to keep functions less than 50 lines long
 * No trailing whitespace
-* Prefer `'` over `"`
+* Prefer `'` over `"` - avoid escaping quotations
 
-## Order
+## Code Order
 
 Code should philosophically be ordered:
 
 - From high level to lower level
 - From public to private
 
-Code in a single file should generally be structured like this:
+Code in a single file should generally be structured in the following order:
 
 1. Global imports - `require('lib')`
 2. Relative imports - `require('./src')`
@@ -39,11 +36,11 @@ Code in a single file should generally be structured like this:
 
 ### Two space indentation
 
-Never use tabs. This is so you can actually read code on GitHub.
+Never use tabs. This is so you can actually read code online.
 
 ### One var/const per line
 
-Way easier than using commas.
+Way easier than using commas. You can also type `var ` with your left hand while you do other things with your right. Better diffs, too.
 
 ```js
 var one = 1
@@ -59,32 +56,6 @@ function (a, b) {}
 function fn(a, b) {}
 ```
 
-### Do not put a space between a function's name and its arguments
-
-```js
-function fn(a, b) {}
-fn(a, b)
-```
-
-Do not do:
-
-```js
-function fn (a, b) {}
-fn (a, b)
-```
-
-The signatures must be consistent.
-
-### No unnecessary spaces
-
-This also includes stuff like:
-
-```js
-fn( a , b )
-```
-
-Now it just looks like boobs with retarded nipples.
-
 ### Surround operators with a space
 
 ```js
@@ -98,40 +69,21 @@ No:
 if(){}else{}
 ```
 
-### Blocks should start and end on the same indentation
+### No unnecessary spaces
 
-If a block begins at column 0, it should end at column 0 as well.
-
-```js
-if (x
-  && y
-  && z
-) return 'yes'
-
-if (x
-  && y
-  && z
-)
-  return 'yes'
-```
-
-Not:
+This also includes stuff like:
 
 ```js
-if (x
-  && y
-  && z)
-  return 'yes'
-
-if (x
-  && y
-  && z) return 'yes'
+fn( a , b )
 ```
+
+Now it just looks like boobs with retarded nipples.
 
 ### Semicolons are optional
 
 Only rule is that you should not let JSHint warn, "unnecessary semicolon".
 In other words, no semicolons after function statements/declarations.
+Do not bitch about semicolons or the lack thereof. There are better, more important fights to fight.
 
 ### Avoid the required use of semicolons
 
@@ -158,22 +110,6 @@ You should avoid this in general, anyways.
 ```js
 ;[].forEach()
 ;(function () {})()
-```
-
-### Never define objects in a single line
-
-Never do the following:
-
-```js
-var obj = {a: 1}
-```
-
-Always expand it out:
-
-```js
-var obj = {
-  a: 1
-}
 ```
 
 ### Define adjustable arrays in multiple lines
@@ -311,25 +247,6 @@ function fn3() {}
 ```
 
 Of course, use actually helpful function names. The same rule could apply to objects, but generally they aren't as difficult to read within objects.
-
-### Attach the `*` of a generator to `function`, not its name/arguments.
-
-`*` specifies the _function_ as a generator, not its name.
-Attaching it to the name or arguments makes no sense.
-
-Yes:
-
-```js
-function* () {}
-function* generator() {}
-```
-
-No:
-
-```js
-function *() {}
-function *generator() {}
-```
 
 ### Always `yield* generator`
 

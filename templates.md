@@ -1,7 +1,5 @@
 ## Javascript
 
-* If a javascript only occurs on a single page and does not require any external libraries or functions,
-  include it inline.
 * Don't use any type of "on DOM ready" logic.
   It messes up with the back button.
 
@@ -9,7 +7,6 @@
 
 * Don't use vendor prefixes - depend on autoprefixer.
 * For inlined-CSS, use the `scoped` attribute on `<style>`.
-  Inline the CSS whenever the CSS only pertains to a certain page.
 * Avoid defining margins - use padding instead.
 
 ## HTML
@@ -48,4 +45,4 @@
 ### Blacklisted Attributes
 
 * `script`
-  * `type` - It should always be Javascript, anyway
+  * `type` - it should always be Javascript, anyway
