@@ -1,7 +1,11 @@
+## General
+
+* Use [SUIT naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) to structure your HTML and CSS.
+
 ## Javascript
 
 * Don't use any type of "on DOM ready" logic.
-  It messes up with the back button.
+  It messes with the back button.
 
 ## CSS
 
