@@ -1,6 +1,9 @@
 ## General
 
 * Use [SUIT naming conventions](https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md) to structure your HTML and CSS.
+* Use `id`s.
+* Use HTML5 elements like `<section>` and `<main>`.
+* Avoid deeply nested selectors - use `id`s, unique tags, or more tags.
 
 ## Javascript
 
