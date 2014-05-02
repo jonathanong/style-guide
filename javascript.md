@@ -222,6 +222,7 @@ function () {
   function done() {
 
   }
+}
 ```
 
 ### Do not define functions within an array
