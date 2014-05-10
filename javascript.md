@@ -254,6 +254,8 @@ Of course, use actually helpful function names. The same rule could apply to obj
 Never `yield generator` or `yield generatorfunction`.
 Always do `yield* generator` or `yield* generatorfunction()`.
 
+Read morea bout the difference between [yield next vs. yield* next](http://jongleberry.com/delegating-yield.html).
+
 ### Put each `yield` in its own separate line
 
 Don't do anything like:
