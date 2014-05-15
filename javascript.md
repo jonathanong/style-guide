@@ -144,6 +144,13 @@ var stuff = {
 If they are not adjustable, then it doesn't matter.
 The reason is that it allows you to add/remove elements without messing up the diff.
 
+### Prepend globals with `this`
+
+Or `global`, whatever the global context is.
+For example, do `this.$` vs. just `$`.
+Global variables should be used sparingly, 
+but when used, it should be obvious that it is a global.
+
 ## Functions
 
 ### Avoid closures
