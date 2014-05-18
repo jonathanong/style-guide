@@ -63,4 +63,4 @@ There are libraries to [thunkify](https://github.com/visionmedia/node-thunkify) 
 but these should only be stopgap solutions.
 Write new libraries in promises, not generators, so people not using Koa can still use them.
 
-For using node.js functions in Koa, you'll want to use [mz](https://github.com/visionmedia/node-thunkify).
+For using node.js functions in Koa, you'll want to use [mz](https://github.com/normalize/mz).
