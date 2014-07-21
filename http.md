@@ -1,9 +1,9 @@
 
 ## Request Bodies
 
-Try to avoid using request bodies and body parsers. 
+Try to avoid using request bodies and body parsers.
 Instead, add the relevant information to the URL and use `PUT` and `DELETE` methods.
-You should also prefer setting the CSRF token via header.
+You should also prefer sending the CSRF token via header.
 
 ## Messages and Errors
 
@@ -20,9 +20,10 @@ With optional additional properties:
 
 ## Content Negotiation
 
-GET requests should __not__ use content negotiation. 
+GET requests should __not__ use content negotiation.
 Assume `html`, and specify different formats using a `.:format` parameter.
-This is because most CDNs only respect `Vary: Accept-Encoding`.
+This is because most CDNs only respect `Vary: Accept-Encoding` and do not cache
+when any other header is varied.
 
 ## Redirects
 

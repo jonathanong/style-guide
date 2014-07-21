@@ -1,11 +1,3 @@
-See also:
-
-- [Felix's Node.js Style Guide](http://nodeguide.com/style.html)
-- [Aaron's JS Style Guide](https://github.com/aheckmann/js-styleguide)
-
-Generally, you should follow their styles unless overridden by these.
-
-## Philosophy
 
 * Prefer the latest ECMAScript syntax available on the target platform(s)
 * Prefer JSON styling when defining objects
@@ -14,23 +6,6 @@ Generally, you should follow their styles unless overridden by these.
 * Try to keep functions less than 50 lines long
 * No trailing whitespace
 * Prefer `'` over `"` - avoid escaping quotations
-
-## Code Order
-
-Code should philosophically be ordered:
-
-- From high level to lower level
-- From public to private
-
-Code in a single file should generally be structured in the following order:
-
-1. Global imports - `require('lib')`
-2. Relative imports - `require('./src')`
-3. Variables - `var a = 1`
-4. Exports - `module.exports = Main`
-5. Main - `function Main() {}`
-6. Prototype Properties - `Main.prototype.something = true`
-7. Utilities - `function add(a, b) {return a + b}`
 
 ## Syntax
 
@@ -148,7 +123,7 @@ The reason is that it allows you to add/remove elements without messing up the d
 
 Or `global`, whatever the global context is.
 For example, do `this.$` vs. just `$`.
-Global variables should be used sparingly, 
+Global variables should be used sparingly,
 but when used, it should be obvious that it is a global.
 
 ## Functions
@@ -171,66 +146,6 @@ Exceptions:
 - Exporting - `export.fn = function () {}`
 - Conditionals - `var fn = a ? function () {} : function () {}`
 - Within a block - `if (true) {let fn = function () {}; this.on('end', fn);}`
-
-### Avoid defining (anonymous) functions within functions
-
-```js
-function sumArray(arr) {
-  return arr.reduce(function (a, b) {
-    return a + b
-  }, 0)
-}
-```
-
-should really be:
-
-```js
-function sumArray(arr) {
-  return arr.reduce(reduceSum, 0)
-}
-
-function reduceSum(a, b) {
-  return a + b
-}
-```
-
-However, doing the same in the following example is unnecessary:
-
-```js
-function multiplyArray(x) {
-  return arr.map(function (y) {
-    return x * y
-  })
-}
-```
-
-### Move function declarations to the end of the closure and after the return statement
-
-```js
-function () {
-  // do this
-  // do that
-  done()
-
-  function done() {
-
-  }
-}
-```
-
-```js
-function () {
-  // do this
-  // do that
-  done()
-
-  return 'something'
-
-  function done() {
-
-  }
-}
-```
 
 ### Do not define functions within an array
 
@@ -255,33 +170,3 @@ function fn3() {}
 ```
 
 Of course, use actually helpful function names. The same rule could apply to objects, but generally they aren't as difficult to read within objects.
-
-### Always `yield* generator`
-
-Never `yield generator` or `yield generatorfunction`.
-Always do `yield* generator` or `yield* generatorfunction()`.
-
-Read morea bout the difference between [yield next vs. yield* next](http://jongleberry.com/delegating-yield.html).
-
-### Put each `yield` in its own separate line
-
-Don't do anything like:
-
-```js
-function* () {
-  var obj = {
-    a: yield 'b'
-  }
-}
-```
-
-Instead, do:
-
-```js
-function* () {
-  var a = yield 'b'
-  var obj = {
-    a: b
-  }
-}
-```
