@@ -11,6 +11,11 @@ If you need to use `.bind()`, then you're probably doing something wrong.
 
 However, this is the lesser of other evils, such as `.bind()`.
 
+### Move try/catches to separate, small functions
+
+You should be writing small functions anyways, but if there are any try/catches in a function,
+try to move it out into a separate function.
+
 ### Always `yield* generator`
 
 Never `yield generator` or `yield generatorfunction`.
