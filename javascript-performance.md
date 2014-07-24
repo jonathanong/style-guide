@@ -11,6 +11,10 @@ If you need to use `.bind()`, then you're probably doing something wrong.
 
 However, this is the lesser of other evils, such as `.bind()`.
 
+### Minimize the number of variables within functions with closures
+
+See this comment: https://github.com/jonathanong/style-guide/commit/ac8595b771d14e584e8b5e4a4b99ffac25aa29ae#commitcomment-7075319
+
 ### Move try/catches to separate, small functions
 
 You should be writing small functions anyways, but if there are any try/catches in a function,
