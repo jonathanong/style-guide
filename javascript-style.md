@@ -4,14 +4,9 @@
 * Filenames should mimic code structure
 * Try to keep lines less than 60 characters wide
 * Try to keep functions less than 50 lines long
-* No trailing whitespace
 * Prefer `'` over `"` - avoid escaping quotations
 
 ## Syntax
-
-### Two space indentation
-
-Never use tabs. This is so you can actually read code online.
 
 ### One var/const per line
 
