@@ -9,9 +9,9 @@ trim_trailing_whitespace = true
 [{Makefile}]
 indent_style = tab
 
-[{*.js,*.css,*.html,*.yaml}]
+[{*.js,*.json,*.css,*.html,*.yaml}]
 indent_style = space
 indent_size = 2
 
-[{*.md,*.markdown}]
+[{*.md,*.markdown,*.jade}]
 trim_trailing_whitespace = false
