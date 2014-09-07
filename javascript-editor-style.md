@@ -1,4 +1,6 @@
 
+See [.editorconfig](.editorconfig).
+
 ### Two space indentation
 
 Never use tabs. This is so you can actually read code online.
