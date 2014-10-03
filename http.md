@@ -25,6 +25,8 @@ Assume `html`, and specify different formats using a `.:format` parameter.
 This is because most CDNs only respect `Vary: Accept-Encoding` and do not cache
 when any other header is varied.
 
+Even better, __don't use any content negotiation__.
+
 ## Redirects
 
 JSON APIs should __never__ use redirects.
