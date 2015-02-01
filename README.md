@@ -1,5 +1,14 @@
 # Style Guide
 
+Note that my latest style guides are now separate repos.
+Please read those style guides and feel free to open up any issues!
+
+- [JavaScript Style Guide](https://github.com/jonathanong/js-style-guide)
+- [JavaScript Module Style Guide](https://github.com/jonathanong/module-style-guide)
+- [Component Style Guide](https://github.com/jonathanong/component-style-guide)
+- [Git Style Guide](https://github.com/jonathanong/git-style-guide)
+- [Server Style Guide](https://github.com/jonathanong/server-style-guide)
+
 - Javascript
   - [Style](javascript-style.md) - aesthetics
   - [Editor Style](javascript-editor-style.md) - style rules for your editors
