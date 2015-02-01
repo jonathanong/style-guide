@@ -9,6 +9,8 @@ Please read those style guides and feel free to open up any issues!
 - [Git Style Guide](https://github.com/jonathanong/git-style-guide)
 - [Server Style Guide](https://github.com/jonathanong/server-style-guide)
 
+Style guides in this repository:
+
 - Javascript
   - [Style](javascript-style.md) - aesthetics
   - [Editor Style](javascript-editor-style.md) - style rules for your editors
